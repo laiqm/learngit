@@ -24,11 +24,19 @@
     ## 查看提交历史
     $ git log [--pretty=oneline]
     ## 获取版本
-    $ git reset --hard HEAD^(或 commit id)
+    $ git reset --hard HEAD^(或 commit id，windows cmd下不支持^，用引号括起来)
     ## 查看文件内容
     $ cat fileName
-    ## 
+    ## 查看命令操作历史(不仅提交历史，可以用于查询回退版本后最新版本号)
+    $ git reflog
+    ## 丢弃工作区修改，获取库里(暂存区有取暂存区)最新
+    $ git checkout -- fileName
+    ## 撤销暂存区内容
+    $ git reset HEAD fileName
+
+
 
 
 # 五. 相关概念
     Git中版本使用head表示。当前版本即是HEAD，上一个版本是HEAD^,上上一个是HEAD^^,多个写成HEAD~n
+    Git包含工作区，暂存区，仓库，add操作实际是把工作区内容添加到暂存区，commit操作是把暂存区内容放到仓库里
