@@ -1,3 +1,4 @@
 empty
 second line
 third line
+master
