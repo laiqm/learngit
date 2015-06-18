@@ -34,14 +34,11 @@
     ## 撤销暂存区内容
     $ git reset HEAD fileName
     ## 关联本地与远程仓库
-    $ git remote add origin git@server-name:path/repo-name.git
+    $ git remote add origin git@github.com:rainhat/learngit.git
     ##推送到远程库
     $ git push [-u 第一次推送需要带此参数] origin master
-
-
-
-
-
+    ##从远程克隆
+    $ git clone git@github.com:rainhat/learngit.git
 
 # 五. 相关概念
     Git中版本使用head表示。当前版本即是HEAD，上一个版本是HEAD^,上上一个是HEAD^^,多个写成HEAD~n
