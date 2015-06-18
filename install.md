@@ -33,6 +33,12 @@
     $ git checkout -- fileName
     ## 撤销暂存区内容
     $ git reset HEAD fileName
+    ## 关联本地与远程仓库
+    $ git remote add origin git@server-name:path/repo-name.git
+    ##推送到远程库
+    $ git push [-u 第一次推送需要带此参数] origin master
+
+
 
 
 
@@ -40,3 +46,11 @@
 # 五. 相关概念
     Git中版本使用head表示。当前版本即是HEAD，上一个版本是HEAD^,上上一个是HEAD^^,多个写成HEAD~n
     Git包含工作区，暂存区，仓库，add操作实际是把工作区内容添加到暂存区，commit操作是把暂存区内容放到仓库里
+
+# 使用github
+    1. 创建sshkey，打开Shell(windows下打开git bash)
+        $ ssh-keygen -t rsa -C "email"
+    2. 生成的密钥对一般在用户目录下，例：C:\Users\yourname\.ssh
+        id_rsa 为私钥，本地上传需要使用
+        id_rsa.pub为公钥，上传至github，具体位置Github->Account Settings-> SSH Keys
+    3. 本地注册私钥：windows下注意，网上一般的方法尝试不可行，正确方式为：命令行进入 git path/cmd 运行start-ssh-agent，ssh-add rsaPath
